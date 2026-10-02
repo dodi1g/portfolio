@@ -1,32 +1,85 @@
  <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دودي | مصمم جرافيك</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
-body{background:#0f172a;color:#fff}
-nav{display:flex;justify-content:space-between;padding:20px;background:#1e293b}
-.hero{text-align:center;padding:80px 20px}
-.hero h1{font-size:42px;color:#38bdf8}
-.hero h2{font-size:28px;margin:10px 0}
-.btn{background:#a855f7;color:#fff;padding:12px 30px;border-radius:30px;text-decoration:none;display:inline-block;margin-top:20px}
-section{padding:50px 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:20px}
-.card{background:#1e293b;padding:20px;border-radius:12px;text-align:center}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبد الخالق أحمد محمود - مصمم جرافيك</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #00cec9;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif;scroll-behavior:smooth}
+        body{background-color:var(--bg-color);color:var(--text-color);line-height:1.6}
+        header{background:rgba(30,41,59,0.8);backdrop-filter:blur(10px);position:fixed;top:0;width:100%;z-index:1000;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1)}
+        .logo{font-size:1.4rem;font-weight:800;color:var(--accent-color);text-decoration:none}
+        nav a{color:var(--text-color);text-decoration:none;margin-right:1.5rem;font-weight:500;transition:color 0.3s}
+        nav a:hover{color:var(--accent-color)}
+        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 1rem;background:radial-gradient(circle at center,#1e1b4b 0%,var(--bg-color) 70%)}
+        .hero h1{font-size:3rem;font-weight:800;margin-bottom:0.5rem;background:linear-gradient(45deg,var(--accent-color),var(--secondary-color));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .hero h2{font-size:1.5rem;color:var(--text-muted);margin-bottom:1.5rem}
+        .hero p{max-width:600px;font-size:1.1rem;margin-bottom:2rem;color:#cbd5e1}
+        .btn{display:inline-block;padding:0.8rem 2rem;background-color:var(--primary-color);color:white;text-decoration:none;border-radius:50px;font-weight:700;transition:all 0.3s;box-shadow:0 4px 15px rgba(108,92,231,0.4)}
+        .btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(108,92,231,0.6);background-color:#5b4bc4}
+        .btn-whatsapp{background-color:#25D366; box-shadow:0 4px 15px rgba(37,211,102,0.4); margin-right:10px}
+        section{padding:5rem 10%}
+        .section-title{text-align:center;font-size:2rem;margin-bottom:3rem;position:relative}
+        .section-title::after{content:'';display:block;width:60px;height:4px;background:var(--accent-color);margin:0.5rem auto 0;border-radius:2px}
+        .skills-container{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+        .skill-card{background:var(--card-bg);padding:2rem;border-radius:15px;width:250px;text-align:center;border:1px solid rgba(255,255,255,0.05);transition:transform 0.3s}
+        .skill-card:hover{transform:translateY(-10px);border-color:var(--accent-color)}
+        .skill-card i{font-size:3rem;color:var(--accent-color);margin-bottom:1rem}
+        .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+        .project-card{background:var(--card-bg);border-radius:15px;overflow:hidden;border:1px solid rgba(255,255,255,0.05);transition:transform 0.3s}
+        .project-card:hover{transform:translateY(-5px)}
+        .project-info{padding:1.5rem;text-align:center}
+        .project-info h3{margin-bottom:0.5rem;color:var(--accent-color)}
+        .contact-container{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+        .contact-item{background:var(--card-bg);padding:1.5rem 2.5rem;border-radius:12px;display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--text-color);border:1px solid rgba(255,255,255,0.05);transition:all 0.3s}
+        .contact-item:hover{border-color:var(--primary-color);background:#253346}
+        .contact-item i{font-size:1.5rem;color:var(--accent-color)}
+        footer{text-align:center;padding:2rem;background:#090d16;color:var(--text-muted);border-top:1px solid rgba(255,255,255,0.05)}
+        @media(max-width:768px){.hero h1{font-size:2.2rem}.hero h2{font-size:1.2rem}section{padding:4rem 5%}nav a{margin-right:0.8rem;font-size:0.9rem}}
+    </style>
 </head>
 <body>
-<nav><b>دودي.dev</b><span>Portfolio</span></nav>
-<div class="hero">
-<h1>عبد الخالق أحمد محمود</h1>
-<h2>الملقب بـ دودي</h2>
-<p>مصمم جرافيك | مطور واجهات | طالب</p>
-<a class="btn" href="#">تواصل معي</a>
-</div>
-<section><h2>مهاراتي</h2><div class="cards"><div class="card">🎨 تصميم جرافيك</div><div class="card">💻 HTML/CSS</div><div class="card">📱 متجاوب</div><div class="card">✨ UI/UX</div></div></section>
-<section><h2>مشاريعي</h2><div class="cards"><div class="card">بطاقة أعمال</div><div class="card">هذا الموقع</div><div class="card">تصاميم سوشيال</div></div></section>
-</body>
-</html>
+    <header>
+        <a href="#" class="logo">عبد الخالق</a>
+        <nav>
+            <a href="#about">عني</a>
+            <a href="#skills">المهارات</a>
+            <a href="#projects">المشاريع</a>
+            <a href="#contact">التواصل</a>
+        </nav>
+    </header>
+    <section class="hero" id="about">
+        <h1>عبد الخالق أحمد محمود دودي</h1>
+        <h2>مصمم جرافيك & طالب تقنية معلومات</h2>
+        <p>أنا طالب في مجال تقنية المعلومات ومصمم جرافيك، مهتم وشغوف بتصميم الشعارات والهويات البصرية الاحترافية التي تعبر عن هويتك بدقة وجمال.</p>
+        <div>
+            <a href="https://wa.me/249116998011" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+            <a href="#contact" class="btn">تواصل معي</a>
+        </div>
+    </section>
+    <section id="skills">
+        <h2 class="section-title">المهارات والبرامج</h2>
+        <div class="skills-container">
+            <div class="skill-card"><i class="fa-solid fa-palette"></i><h3>Adobe Photoshop</h3></div>
+            <div class="skill-card"><i class="fa-solid fa-pen-nib"></i><h3>Canva</h3></div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2 class="section-title">أبرز الأعمال</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <i class="fa-solid fa-id-card"
